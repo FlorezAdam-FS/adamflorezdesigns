@@ -25,13 +25,6 @@ export default function Home() {
       "-=5"
     );
     tl.to(
-      ".adam span",
-      {
-        color: "#27282A",
-      },
-      "-=2.5"
-    );
-    tl.to(
       ".titles",
       {
         y: 0,
@@ -66,7 +59,7 @@ export default function Home() {
     });
   });
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen min-w-full bg-orange">
+    <main className="flex flex-col items-center justify-center min-h-screen min-w-full bg-dark">
       <div className="w-[90%] mx-auto h-full flex-grow flex items-center justify-start">
         <div className="p-8 relative z-50 sm:text-center lg:text-left">
           <h1
@@ -89,7 +82,7 @@ export default function Home() {
             </span>
           </h1>
           <p
-            className="info mt-3 text-sm translate-y-[100px] opacity-0 text-left text-dark  sm:mt-5 sm:text-md sm:max-w-cl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 lg:max-w-2xl lg:text-lg"
+            className="info mt-3 text-sm translate-y-[100px] opacity-0 text-left text-white  sm:mt-5 sm:text-md sm:max-w-cl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 lg:max-w-2xl lg:text-lg"
             style={{
               clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
             }}
@@ -101,22 +94,21 @@ export default function Home() {
           </p>
           <div className="mt-8 max-w-[400px] sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <Link href="/work">
-              <a className="button scale-y-0 origin-bottom  ease-in mr-3 duration-200 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium text-white bg-dark hover:bg-dark md:py-4 md:text-lg md:px-10">
+              <a className="button scale-y-0 origin-bottom  ease-in mr-3 duration-200 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium text-dark bg-white hover:bg-orange hover:text-white md:py-4 md:text-lg md:px-10">
                 My Work
               </a>
             </Link>
 
-            <a
-              href="#"
-              className="button scale-y-0 origin-bottom ease-in duration-200 w-full flex items-center justify-center px-8 py-3 border border-dark text-base font-medium text-dark bg-transparent border-white hover:border-dark hover:text-white hover:bg-dark md:py-4 md:text-lg md:px-10"
-            >
-              Contact Me
-            </a>
+            <Link href="/contact">
+              <a className="button scale-y-0 origin-bottom ease-in duration-200 w-full flex items-center justify-center px-8 py-3 border border-dark text-base font-medium text-white bg-transparent border-white hover:border-none  hover:bg-orange hover:text-white md:py-4 md:text-lg md:px-10">
+                Contact Me
+              </a>
+            </Link>
           </div>
         </div>
       </div>
       <div
-        className="black-bg h-full w-full absolute lg:block bottom-0 right-0 bg-dark z-0"
+        className="black-bg h-[100vh] w-full absolute lg:block bottom-0 right-0 bg-orange z-0"
         style={{
           "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
           zIndex: 0,
